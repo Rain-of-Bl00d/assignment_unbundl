@@ -1,99 +1,321 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clove Dental</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="page_wrapper">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <!-- Navbar -->
-    <header class="nav_bar">
-      <div class="nav_logo">
-        <h1 class="nav_logo_heading">clove<span style="color:black">:)</span></h1>
-        <p class="nav_logo_para">DENTAL</p>
-      </div>
-      <div class="nav_contact_sec">
-        <button class="book_appointment_btn">Book Appointment</button>
-        <button class="contact_phone_number">
-          <i class="fa-solid fa-phone"></i> 985-6589-510
-        </button>
-      </div>
-    </header>
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-    <!-- Main Section -->
-    <main class="banner_section">
-      <section class="banner">
-        <div class="hazzy_info_sec">
-          <div class="info-sec">
-            <p class="info-1">Painless Root Canal Treatment Delhi</p>
-            <p class="info-2">Expert RCT, Zero pain, Right Here in Delhi</p>
-          </div>
-          <div style="margin-left:35px; margin-top:20px">
-            <button class="book_appointment_btn1">Book Appointment</button>
-          </div>
-        </div>
-        <div class="doctor_banner_img">
-          <img src="./doctor.png" alt="Doctor Image" />
-        </div>
-      </section>
-      <!-- Form Section -->
-      <aside class="booking_section_2">
-        <div class="form_heading">
-          <h4>Get Expert Dental Guidance Delhi</h4>
-          <p style="margin-top:12px">
-            Book your free consultation today and take the first step towards healthy, beautiful teeth.
-          </p>
-          <input type="text" class="name" placeholder="Name" />
-          <input type="text" class="mobnum" placeholder="Mobile Number" />
-          <div class="captcha_sec">
-            <input type="text" class="captcha_input" placeholder="Captcha" />
-            <button class="captcha">1514</button>
-          </div>
-          <div class="terms_policy_sec">
-            <input type="checkbox" class="radio_class" />
-            <p class="terms_cond_para">
-              I agree to CLOVE Dental's Terms and Privacy Policy and consent to contact via phone, email, or SMS.
-            </p>
-          </div>
-          <button class="book_consultant_button">Book a Free Consultant</button>
-        </div>
-      </aside>
+.page_wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
 
-      <aside class="booking_section">
-        <div class="form_heading">
-          <h4>Get Expert Dental Guidance Delhi</h4>
-          <p style="margin-top:12px">
-            Book your free consultation today and take the first step towards healthy, beautiful teeth.
-          </p>
-          <input type="text" class="name" placeholder="Name" />
-          <input type="text" class="mobnum" placeholder="Mobile Number" />
-          <div class="captcha_sec">
-            <input type="text" class="captcha_input" placeholder="Captcha" />
-            <button class="captcha">1514</button>
-          </div>
-          <div class="terms_policy_sec">
-            <input type="checkbox" class="radio_class" />
-            <p class="terms_cond_para">
-              I agree to CLOVE Dental's Terms and Privacy Policy and consent to contact via phone, email, or SMS.
-            </p>
-          </div>
-          <button class="book_consultant_button">Book a Free Consultant</button>
-        </div>
-      </aside>
-    </main>
-    
-    <!-- Marquee Section -->
-<div class="marquee-container">
-  <marquee behavior="scroll" direction="left" class="custom-marquee">
-    <div class="marquee-item"><span class="highlight">Painless</span> Treatment <span>•</span></div>
-    <div class="marquee-item"><span class="highlight">Affordable</span> Prices <span>•</span></div>
-    <div class="marquee-item"><span class="highlight">Modern</span> Equipment <span>•</span></div>
-    <div class="marquee-item"><span class="highlight">Comfortable</span> Environment</div>
-  </marquee>
-</div>
-</body>
-</html>
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3f2fd;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.nav_logo_heading {
+  color: #3f51b5;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav_logo_para {
+  font-size: 14px;
+  color: #555;
+  margin-top: -8px;
+}
+
+.nav_contact_sec {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.book_appointment_btn,
+.contact_phone_number {
+  padding: 10px 18px;
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact_phone_number {
+  background-color: #4caf50;
+}
+
+.book_appointment_btn:hover,
+.contact_phone_number:hover {
+  opacity: 0.9;
+}
+
+.banner_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.hazzy_info_sec {
+  flex: 1;
+  max-width: 500px;
+}
+
+.info-1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e53935;
+}
+
+.info-2 {
+  font-size: 18px;
+  color: #444;
+  margin-top: 10px;
+}
+
+.book_appointment_btn1 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.book_appointment_btn1:hover {
+  background-color: #d32f2f;
+}
+
+.doctor_banner_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.booking_section_2,
+.booking_section {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.07);
+  padding: 25px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.form_heading h4 {
+  font-size: 20px;
+  color: #1e88e5;
+}
+
+.form_heading p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.captcha_sec {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.captcha {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.terms_policy_sec {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.terms_cond_para {
+  font-size: 12px;
+  color: #666;
+}
+
+.radio_class {
+  margin-top: 4px;
+}
+
+.book_consultant_button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.book_consultant_button:hover {
+  background-color: #1565c0;
+}
+
+.marquee-container {
+  margin-top: 30px;
+  overflow: hidden;
+  background-color: #e3f2fd;
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.custom-marquee {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+}
+
+.marquee-item {
+  display: inline-block;
+}
+
+.highlight {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+@media (min-width: 1440px) {
+  .page_wrapper {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .banner_section {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav_bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .banner_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hazzy_info_sec {
+    text-align: center;
+  }
+
+  .doctor_banner_img {
+    text-align: center;
+  }
+
+  .booking_section_2,
+  .booking_section {
+    max-width: 100%;
+  }
+
+  .custom-marquee {
+    font-size: 14px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav_logo_heading {
+    font-size: 22px;
+  }
+
+  .info-1 {
+    font-size: 20px;
+  }
+
+  .info-2 {
+    font-size: 16px;
+  }
+
+  .book_appointment_btn,
+  .contact_phone_number {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .book_appointment_btn1 {
+    width: 100%;
+  }
+
+  .captcha_sec {
+    flex-direction: column;
+  }
+
+  .custom-marquee {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 479px) {
+  .form_heading h4 {
+    font-size: 18px;
+  }
+
+  .form_heading p {
+    font-size: 13px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  .book_consultant_button {
+    font-size: 14px;
+  }
+}
